@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slide effect with preview</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="slider">
+	<!-- 承载所有幻灯片 -->
+	<!-- 0、修改 VIEW 》》Template (关键字替换)，增加template id -->
+		<div class="main" id="template_main">
+			<div class="main-i {{css}}" id="main_{{index}}">
+			<!-- 标题 -->
+				<div class="caption">
+					<h1>{{h1}}</h1>
+					<h2>{{h2}}</h2>
+				</div>
+				<img src="images/{{index}}.jpg" class="picture" >
+			</div>
+		</div>
+	<!-- 控制按钮 -->
+		<div class="ctrl" id="template_ctrl">
+			<a href="javascript:switchSlider({{index}});" class="ctrl-i" id="ctrl_{{index}}">
+			<!-- 缩略图 -->
+				<img src="images/{{index}}.jpg" >
+			</a>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/slide.js"></script>
+</body>
+</html>
